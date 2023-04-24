@@ -14,6 +14,45 @@ export default function Application(props) {
     interviewers: {}
   });
 
+  function bookInterview(id, interview) {
+
+    const appointment = {
+      ...state.appointments[id],
+      interview: { ...interview }
+   };
+
+   return axios.put(`/api/appointments/${id}`, { interview } )
+   .then(() => {
+   const appointments = {
+    ...state.appointments,
+    [id]: appointment
+  };
+  
+  setState({
+    ...state,
+    appointments
+  });
+});
+}
+
+
+function cancelInterview(id) {
+const appointment = {
+  ...state.appointments[id],
+  interview: null,
+};
+const appointments = {
+  ...state.appointments,
+  [id]: appointment,
+};
+setState(prev => ({ ...prev, appointments }));
+return axios.delete(`/api/appointments/${id}`)
+.catch(() => {
+
+});
+}
+
+
   const setDay = day => setState({ ...state, day });
 
   useEffect(() => {
@@ -38,6 +77,8 @@ export default function Application(props) {
       time={appointment.time}
       interview={interview}
       interviewers={interviewers}
+      bookInterview={bookInterview}
+      cancelInterview={cancelInterview}
       />
     );
   });
@@ -63,7 +104,6 @@ export default function Application(props) {
         />
       </section>
       <section className="schedule">
-
         {schedule}
       </section>
     </main>
