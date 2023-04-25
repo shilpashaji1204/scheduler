@@ -19,9 +19,10 @@ export default function Appointment(props) {
     const CREATE = "CREATE";
     const SAVING = "SAVING";
     const DELETE = "DELETE";
+    const CONFIRM = "CONFIRM";
+    const EDIT = "EDIT";
     const ERROR_SAVE = "ERROR_SAVE";
     const ERROR_DELETE = "ERROR_DELETE";
-    const CONFIRM = "CONFIRM";
 
     const [interview, setInterview] = useState(props.interview);
 
@@ -56,6 +57,9 @@ export default function Appointment(props) {
             transition(ERROR_DELETE, true);  
         });
     }
+    function edit() {
+        transition(EDIT);
+    }
     return (
         <article className="appointment">
             <Header time={props.time} />
@@ -65,6 +69,7 @@ export default function Appointment(props) {
                     student={props.interview.student}
                     interviewer={props.interview.interviewer}
                     onDelete={() => transition(CONFIRM)}
+                    onEdit={() => edit()}
                 />
             )}
 
@@ -83,6 +88,15 @@ export default function Appointment(props) {
                 message="Are you sure you would like to delete?"
                 onCancel={() => back()}
                 onConfirm={deleteInterview}
+                />
+            )}
+            {mode === EDIT && (
+                <Form
+                interviewers={props.interviewers}
+                onCancel={() => back()}
+                onSave={save}
+                name={interview.student}
+                interviewer={props.interview.interviewer.id}
                 />
             )}
             {mode === ERROR_SAVE && (
