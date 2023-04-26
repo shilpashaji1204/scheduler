@@ -11,7 +11,6 @@ import Error from "./Error";
 import Confirm from "./Confirm";
 
 
-
 export default function Appointment(props) {
 
     const EMPTY = "EMPTY";
@@ -47,7 +46,7 @@ export default function Appointment(props) {
      }
 
      function deleteInterview() {
-        transition(DELETE);
+        transition(DELETE, true);
         props.cancelInterview(props.id)
         .then (() => {
             setInterview(null);
