@@ -20,7 +20,29 @@ Interview Scheduler is a Single Page Application(SPA) for tracking students inte
 * When the user presses the close button of the error they are returned to the Form or Show view (skipping Status and Confirm).
 * The application makes API requests to load and persist data. We do not lose data after a browser refresh.
 
+## Home Page
 
+<img width="1470" alt="Home_Page" src="https://user-images.githubusercontent.com/121919958/234910296-a01c3cb8-80f3-4b21-bb17-ddc87b58da2c.png">
+
+By selecting a weekday on the left panel, a user can see booked appointments and available slots for each day.
+
+## Creating New appointment 
+
+<img width="1469" alt="Creating_appointment" src="https://user-images.githubusercontent.com/121919958/234910897-1b86ce9a-85ed-4341-96a9-09d72dfe2342.png">
+
+A user can add interviews to available slots by typing a student name and adding interviewer from the list 
+
+## Editing appointment 
+
+<img width="1468" alt="Edit" src="https://user-images.githubusercontent.com/121919958/234911605-1c6749a1-335d-4aea-b618-a4422528a9d3.png">
+
+A user can edit an existing appointment by clicking the edit icon.
+
+// Deleting appointment 
+
+<img width="1470" alt="Delete" src="https://user-images.githubusercontent.com/121919958/234912666-ebbd9d3f-846f-4aa1-ba3d-b9d40cf0f5ed.png">
+
+A user can delete an existing appointment by clicking the delete icon and a warning message pop up to confirm.
 
 ## Setup
 
