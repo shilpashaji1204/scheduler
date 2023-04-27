@@ -38,7 +38,7 @@ A user can add interviews to available slots by typing a student name and adding
 
 A user can edit an existing appointment by clicking the edit icon.
 
-// Deleting appointment 
+## Deleting appointment 
 
 <img width="1470" alt="Delete" src="https://user-images.githubusercontent.com/121919958/234912666-ebbd9d3f-846f-4aa1-ba3d-b9d40cf0f5ed.png">
 
@@ -65,3 +65,20 @@ npm test
 ```sh
 npm run storybook
 ```
+
+## Technical Specifications
+
+* React
+* Webpack
+* Babel
+* Axios
+* Storybook
+* Jest
+* Testing Library
+* Webpack Dev Server
+
+The Scheduler client application created using Create React App. Express is the basis for the Scheduler API server application.
+
+Both servers run concurrently; requests are proxied from the Webpack development server to the API server.
+
+
