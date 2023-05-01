@@ -2,7 +2,7 @@
 
 ## Project Description
 
-Interview Scheduler is a Single Page Application(SPA) for tracking students interviews bulit using React. The App allows users to add,edit and delete appointments in real time. Data is persisted by the API server using a PostgreSQL database. The client application communicates with an API server over HTTP, using the JSON format. Jest tests are used through the development of the project.
+Interview Scheduler is a Single Page Application(SPA) for tracking students interviews built using React. The App allows users to add,edit and delete appointments in real time. Data is persisted by the API server using a PostgreSQL database. The client application communicates with an API server over HTTP, using the JSON format. Jest tests are used through the development of the project.
 
 ## Project Features
 
